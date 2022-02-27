@@ -1,16 +1,13 @@
-local configs = require 'nvim_lsp/configs'
-local util = require 'nvim_lsp/util'
+local lspconfig = require('lspconfig')
 
-confis.zls = {
-	default_config = {
-		cmd = {"~/.nix-profile/bin/zls"};
-		filetypes = {"zig"};
-		root_dir = util.root_pattern("build.zig", ".git");
-	};
-	docs = {
-		description = [[ ]];
-		default_config = {
-			root_dir = [[root_pattern("build.zig", ".git")]];
-		};
-	};
-}
+local on_attach = function(_, bufnr)
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  require('completion').on_attach()
+end
+
+local servers = {'zls'}
+  for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+  		on_attach = on_attach,
+    }
+end
