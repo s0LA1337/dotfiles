@@ -1,28 +1,6 @@
-local cmp = require('cmp')
-local lspkind = require('lspkind')
-local luasnip = require('luasnip')
-
-vim.opt.completeopt = 'menuone,noselect'
+local lspkind = require "lspkind"
 
 cmp.setup({
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
-    formatting = {
-        format = function(entry, vim_item)
-            vim_item.kind = require('lspkind').presets.default[vim_item.kind] .. ' ' .. vim_item.kind
-
-            vim_item.menu = ({
-                nvim_lsp = '[LSP]',
-                luasnip = '[LuaSnip]',
-                buffer = '[Buffer]',
-                path = '[Path]',
-            })[entry.source.name]
-            return vim_item
-        end,
-    },
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -43,28 +21,36 @@ cmp.setup({
                 fallback()
             end
         end,
-        ['<S-Tab>'] = function(fallback)
-            if vim.fn.pumvisible() == 1 then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
-            elseif luasnip.jumpable(-1) then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
-            else
-                fallback()
-            end
-        end,
     },
     sources = {
         { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'buffer' },
         { name = 'path' },
+        { name = 'luasnip' },
+        { name = 'buffer', keyword_length = 3 },
     },
-})
 
-local _, autopairs = pcall(require, 'nvim-autopairs')
-autopairs.setup()
+		snippet = {
+				expand = function(args) 
+				    require("luasnip").lsp_expand(args.body)
+				end,
+		},
 
-require('nvim-autopairs.completion.cmp').setup({
-    map_cr = true,
-    map_complete = true,
+		formatting = {
+		  format = lspkind.cmp_format {
+		    with text = true,
+        menu = {
+				  buffer = "[buf]",
+			 	  nvim_lsp = "[LSP]",
+          nvim_lua = "[api]",
+          path = "[path]",
+          luasnip = "[snip]",
+        },
+      },
+    },
+
+		experimental = {
+      native_menu = false,
+
+			ghost_text = true,
+		},
 })
