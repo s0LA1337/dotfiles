@@ -1,6 +1,7 @@
 local lspkind = require "lspkind"
+local cmp = require "cmp"
 
-cmp.setup({
+cmp.setup {
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -22,6 +23,7 @@ cmp.setup({
             end
         end,
     },
+
     sources = {
         { name = 'nvim_lsp' },
         { name = 'path' },
@@ -53,4 +55,4 @@ cmp.setup({
 
 			ghost_text = true,
 		},
-})
+}
