@@ -39,7 +39,7 @@ cmp.setup {
 
 		formatting = {
 		  format = lspkind.cmp_format {
-		    with text = true,
+		    with_text = true,
         menu = {
 				  buffer = "[buf]",
 			 	  nvim_lsp = "[LSP]",
