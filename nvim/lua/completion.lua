@@ -1,17 +1,8 @@
-local lspkind = require "lspkind"
-
-local lspconfig = require "lspconfig"
-
-local servers = {'zls', 'rust_analyzer'}
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-		on_attach = on_attach,
-  }
-end
+local lspkind = require("lspkind")
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-local cmp = require "cmp"
+local cmp = require("cmp")
 
 cmp.setup {
     mapping = {
@@ -69,7 +60,6 @@ cmp.setup {
 
 		experimental = {
       native_menu = false,
-
 			ghost_text = true,
 		},
 }
