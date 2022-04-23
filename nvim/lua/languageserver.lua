@@ -1,8 +1,8 @@
 local lspconfig = require('lspconfig')
 
-local on_attach = function(cl, bufnr)
+local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  require('completion').on_attach(cl, bufnr)
+  require('completion').on_attach()
 end
 
 local servers = {'zls', 'rust_analyzer'}
