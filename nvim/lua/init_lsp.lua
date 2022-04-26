@@ -10,3 +10,4 @@ lcfg.dockerls.setup{}
 lcfg.html.setup{}
 lcfg.csharp_ls.setup{}
 lcfg.pyright.setup{}
+lcfg.rnix.setup{}
