@@ -49,11 +49,11 @@ cmp.setup {
 		  format = lspkind.cmp_format {
 		    with_text = true,
         menu = {
-				  buffer = "[BUF]",
+				  buffer   = "[BUF]",
 			 	  nvim_lsp = "[LSP]",
           nvim_lua = "[API]",
-          path = "[PATH]",
-          luasnip = "[SNIP]",
+          path     = "[PATH]",
+          luasnip  = "[SNIP]",
         },
       },
     },
@@ -63,3 +63,10 @@ cmp.setup {
 			ghost_text = true,
 		},
 }
+
+cmp.setup.cmdline('/', {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = {
+		{ jame = 'buffer' }
+	}
+})
