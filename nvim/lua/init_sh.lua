@@ -7,7 +7,6 @@ require('lsp_signature').setup({
 	fix_pos = false,
 	hint_enable = true,
 	hint_scheme = "String",
-	hi_parameter = "LspSignatureActiveParameter",
 	max_height = 18,
 	max_width = 86,
 
@@ -17,8 +16,8 @@ require('lsp_signature').setup({
 
 	zindex = 200,
 	padding = '',
+	extra_trigger_chars = {"(", ","},
 
 	transparency = nil,
-	timer_interval = 100,
-	toogle_key = 'C-k'
+	timer_interval = 100
 })
