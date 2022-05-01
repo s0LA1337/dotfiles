@@ -16,7 +16,7 @@ require('lsp_signature').setup({
 
 	zindex = 200,
 	padding = '',
-	extra_trigger_chars = {"(", ","},
+	extra_trigger_chars = {"(", ",", "{"},
 
 	transparency = nil,
 	timer_interval = 100
