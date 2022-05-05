@@ -349,8 +349,8 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control system colors.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND="#24283b"
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="#24283b"
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=2
   typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=3
   typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
@@ -510,7 +510,7 @@
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND="#f7768e"
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND="#f7758e"
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND="#24283b"
 
   # Status when the last command was terminated by a signal.
@@ -518,14 +518,14 @@
   # Use terse signal names: "INT" instead of "SIGINT(2)".
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND="#f7768e"
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND="#f7758e"
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND="#24283b"
 
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND="#f7768e"
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND="#f7758e"
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND="#24283b"
 
   ###################[ command_execution_time: duration of the last command ]###################
@@ -545,8 +545,8 @@
 
   #######################[ background_jobs: presence of background jobs ]#######################
   # Background jobs color.
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=6
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=0
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND="#24283b"
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   # Custom icon.
@@ -554,8 +554,8 @@
 
   #######################[ direnv: direnv status (https://direnv.net/) ]########################
   # Direnv color.
-  typeset -g POWERLEVEL9K_DIRENV_FOREGROUND=3
-  typeset -g POWERLEVEL9K_DIRENV_BACKGROUND=0
+  typeset -g POWERLEVEL9K_DIRENV_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_DIRENV_BACKGROUND="#24283b"
   # Custom icon.
   # typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -563,8 +563,8 @@
   # Default asdf color. Only used to display tools for which there is no color override (see below).
   # Tip:  Override these parameters for ${TOOL} with POWERLEVEL9K_ASDF_${TOOL}_FOREGROUND and
   # POWERLEVEL9K_ASDF_${TOOL}_BACKGROUND.
-  typeset -g POWERLEVEL9K_ASDF_FOREGROUND=0
-  typeset -g POWERLEVEL9K_ASDF_BACKGROUND=7
+  typeset -g POWERLEVEL9K_ASDF_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_ASDF_BACKGROUND="#24283b"
 
   # There are four parameters that can be used to hide asdf tools. Each parameter describes
   # conditions under which a tool gets hidden. Parameters can hide tools but not unhide them. If at
@@ -743,8 +743,8 @@
 
   ###########################[ vim_shell: vim shell indicator (:sh) ]###########################
   # Vim shell indicator color.
-  typeset -g POWERLEVEL9K_VIM_SHELL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_VIM_SHELL_BACKGROUND=2
+  typeset -g POWERLEVEL9K_VIM_SHELL_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_VIM_SHELL_BACKGROUND="#24283b"
   # Custom icon.
   # typeset -g POWERLEVEL9K_VIM_SHELL_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -757,8 +757,8 @@
 
   #[ nix_shell: nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html) ]##
   # Nix shell color.
-  typeset -g POWERLEVEL9K_NIX_SHELL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_NIX_SHELL_BACKGROUND=4
+  typeset -g POWERLEVEL9K_NIX_SHELL_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_NIX_SHELL_BACKGROUND="#24283b"
 
   # Tip: If you want to see just the icon without "pure" and "impure", uncomment the next line.
   # typeset -g POWERLEVEL9K_NIX_SHELL_CONTENT_EXPANSION=
@@ -768,12 +768,12 @@
 
   ##################################[ disk_usage: disk usage ]##################################
   # Colors for different levels of disk usage.
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=3
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_BACKGROUND=0
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=0
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_BACKGROUND=3
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=7
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_BACKGROUND=1
+  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_BACKGROUND="#24283b"
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_BACKGROUND="#24283b"
+  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND="#f7758e"
+  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_BACKGROUND="#24283b"
   # Thresholds for different levels of disk usage (percentage points).
   typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
   typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
@@ -816,21 +816,21 @@
   # Show average CPU load over this many last minutes. Valid values are 1, 5 and 15.
   typeset -g POWERLEVEL9K_LOAD_WHICH=5
   # Load color when load is under 50%.
-  typeset -g POWERLEVEL9K_LOAD_NORMAL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_NORMAL_BACKGROUND=2
+  typeset -g POWERLEVEL9K_LOAD_NORMAL_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_LOAD_NORMAL_BACKGROUND="#24283b"
   # Load color when load is between 50% and 70%.
-  typeset -g POWERLEVEL9K_LOAD_WARNING_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_WARNING_BACKGROUND=3
+  typeset -g POWERLEVEL9K_LOAD_WARNING_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_LOAD_WARNING_BACKGROUND="#24283b"
   # Load color when load is over 70%.
-  typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND=1
+  typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND="#24283b"
   # Custom icon.
   # typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ################[ todo: todo items (https://github.com/todotxt/todo.txt-cli) ]################
   # Todo color.
-  typeset -g POWERLEVEL9K_TODO_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TODO_BACKGROUND=8
+  typeset -g POWERLEVEL9K_TODO_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_TODO_BACKGROUND="#24283b"
   # Hide todo when the total number of tasks is zero.
   typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_TOTAL=true
   # Hide todo when the number of tasks after filtering is zero.
@@ -854,8 +854,8 @@
 
   ###########[ timewarrior: timewarrior tracking status (https://timewarrior.net/) ]############
   # Timewarrior color.
-  typeset -g POWERLEVEL9K_TIMEWARRIOR_FOREGROUND=255
-  typeset -g POWERLEVEL9K_TIMEWARRIOR_BACKGROUND=8
+  typeset -g POWERLEVEL9K_TIMEWARRIOR_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_TIMEWARRIOR_BACKGROUND="#24283b"
 
   # If the tracked task is longer than 24 characters, truncate and append "…".
   # Tip: To always display tasks without truncation, delete the following parameter.
@@ -868,8 +868,8 @@
 
   ##############[ taskwarrior: taskwarrior task count (https://taskwarrior.org/) ]##############
   # Taskwarrior color.
-  typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TASKWARRIOR_BACKGROUND=6
+  typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND="#2ac3de"
+  typeset -g POWERLEVEL9K_TASKWARRIOR_BACKGROUND="#24283b"
 
   # Taskwarrior segment format. The following parameters are available within the expansion.
   #
@@ -1532,7 +1532,7 @@
   ###########[ ip: ip address and bandwidth usage for a specified network interface ]###########
   # IP color.
   typeset -g POWERLEVEL9K_IP_BACKGROUND="#24283b"
-  typeset -g POWERLEVEL9K_IP_FOREGROUND=0
+  typeset -g POWERLEVEL9K_IP_FOREGROUND="#2ac3de"
   # The following parameters are accessible within the expansion:
   #
   #   Parameter             | Meaning
@@ -1560,11 +1560,11 @@
   ################################[ battery: internal battery ]#################################
   # Show battery in red when it's below this level and not connected to power supply.
   typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
-  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=1
+  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND="#f7758e"
   # Show battery in green when it's charging or fully charged.
-  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=2
+  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND="#2ac3de"
   # Show battery in yellow when it's discharging.
-  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=44
+  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND="#2ac3de"
   # Battery pictograms going from low to high level of charge.
   typeset -g POWERLEVEL9K_BATTERY_STAGES='\uf58d\uf579\uf57a\uf57b\uf57c\uf57d\uf57e\uf57f\uf580\uf581\uf578'
   # Don't show the remaining time to charge/discharge.
