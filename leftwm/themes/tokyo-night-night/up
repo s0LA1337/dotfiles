@@ -9,6 +9,10 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
+if pgrep -x "polybar" > /dev/null 
+then
+  $SCRIPTPATH/down
+fi
 
 #boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
@@ -33,6 +37,7 @@ do
   let indextemp=index+1
   monitor=$(sed "$indextemp!d" <<< "$monitors")
   barname="mainbar$index"
+  echo $SCRIPTPATH
   monitor=$monitor offset=$x width=$width polybar -c $SCRIPTPATH/config.config $barname &> /dev/null &
   let index=indextemp
 done
