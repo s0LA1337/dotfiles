@@ -9,10 +9,6 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
-if pgrep -x "polybar" > /dev/null 
-then
-  $SCRIPTPATH/down
-fi
 
 #boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
@@ -26,7 +22,7 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
 #set background
 if [ -x "$(command -v feh)" ]; then
-  feh --bg-scale $SCRIPTPATH/background.png
+  feh --bg-scale $SCRIPTPATH/background.jpg
 fi
 
 
@@ -35,10 +31,9 @@ monitors="$(polybar -m | sed s/:.*//)"
 leftwm-state -q -n -t $SCRIPTPATH/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   let indextemp=index+1
-  monitor=$(sed "$indextemp!d" <<< "$monitors")
+  monitor=$(sed "$indextemp!d" <<<"$monitors")
   barname="mainbar$index"
-  echo $SCRIPTPATH
-  monitor=$monitor offset=$x width=$width polybar -c $SCRIPTPATH/../default/basic_polybar/polybar.config $barname &> /dev/null &
+  monitor=$monitor offset=$x width=$width polybar -c $SCRIPTPATH/polybar.config $barname &> /dev/null &
   let index=indextemp
 done
 
