@@ -30,6 +30,11 @@ modifier = ["modkey", "Shift"]
 key = "s"
 
 [[keybind]]
+command = "rofi -show menu -modi "menu:rofi-power-menu --choices=shutdown/hibernate/reboot""
+modifier = ["modkey", "Shift"]
+key = "q"
+
+[[keybind]]
 command = "CloseWindow"
 modifier = ["modkey", "Shift"]
 key = "q"
