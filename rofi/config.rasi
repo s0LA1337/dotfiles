@@ -1,37 +1,78 @@
-*                     {
-  background-color:   "#24283b";
-  border-color:       "#a9b1d6";
-  text-color:         "#c3a4f8";
-  font:               "Ricty Diminished with Fira Code 13";
-}
-window                {
-  anchor:             north;
-  location:           north;
-  width:              100%;
-  padding:            4px;
-  children:           [ horibox ];
-}
-horibox               {
-  orientation:        horizontal;
-  children:           [ prompt, entry, listview ];
-}
-listview              {
-  layout:             horizontal;
-  spacing:            5px;
-  lines:              100;
-}
-entry                 {
-  expand:           false;
-  width:            10em;
-}
-element               {
-  padding:          0px 2px;
-}
-element               selected {
-  background-color: "#24283b";
+configuration {
+  font: "Ricty Diminished with Fira Code Regular 11";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
 }
 
-element-text,         element-icon {
-  background-color:   inherit;
-  text-color:         inherit;
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #24283b;
+  bg-alt: #414868;
+  fg: #a9b1d6;
+  fg-alt: #c0caf5;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  lines: 8;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 10px 0;
+}
+
+element-text selected {
+  text-color: @fg-alt;
 }
