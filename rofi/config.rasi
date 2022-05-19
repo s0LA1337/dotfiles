@@ -35,10 +35,12 @@ configuration {
 }
 
 window {
+  background-color: inherit;
   transparency: "real";
 }
 
 mainbox {
+  background-color: inherit;
   children: [inputbar, listview];
 }
 
