@@ -48,31 +48,32 @@ inputbar {
 }
 
 entry {
-  background-color: inherit;
-  padding: 12px 3px;
+  padding: 10px 2px;
 }
 
 prompt {
-  background-color: inherit;
-  padding: 12px;
+  background-color: @bg-alt;
+  padding: 10px;
 }
 
 listview {
-  lines: 8;
+  lines: 4;
 }
 
 element {
+  background-color: inherit;
   children: [element-icon, element-text];
 }
 
 element-icon {
-  padding: 10px 10px;
+  padding: 10px 6px;
 }
 
 element-text {
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 element-text selected {
+  background-color: @bg-alt;
   text-color: @fg-alt;
 }
