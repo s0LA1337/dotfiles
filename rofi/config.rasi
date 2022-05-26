@@ -80,3 +80,4 @@ element-text selected {
   background-color: @bg-alt;
   text-color: @fg-alt;
 }
+

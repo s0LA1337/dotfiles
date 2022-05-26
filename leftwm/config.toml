@@ -7,7 +7,7 @@ disable_current_tag_swap = false
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
+value = "rofi -show drun"
 modifier = ["modkey"]
 key = "p"
 
