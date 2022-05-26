@@ -3128,7 +3128,7 @@ colors.webpage.preferred_color_scheme:
 ## dark mode
 
 colors.webpage.darkmode.enabled:
-  default: false
+  default: true
   type: Bool
   desc: >-
     Render all web contents using a dark theme.
