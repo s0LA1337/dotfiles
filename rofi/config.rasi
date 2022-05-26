@@ -2,13 +2,9 @@ configuration {
   font: "Ricty Diminished with Fira Code Regular 11";
   show-icons: false;
 
-  drun {
+drun {
     display-name: "";
-  }
-
-  run {
-    display-name: "";
-  }
+}
 
   timeout {
     delay: 10;
@@ -19,7 +15,7 @@ configuration {
 @import "colors.rasi"
 
 window {
-    display-name:     "";
+    display-name:     "";
     transparency:     "real";
     background-color: @bg;
     text-color:       @fg;
@@ -66,9 +62,9 @@ inputbar {
 listview {
     background-color: @al;
     padding:          0px;
-    columns:          2;
-    lines:            7;
-    spacing:          6px;
+    columns:          1;
+    lines:            4;
+    spacing:          4px;
     cycle:            true;
     dynamic:          true;
     layout:           vertical;
@@ -85,17 +81,11 @@ mainbox {
 }
 
 element {
-    background-color: @al;
+    background-color: @bg;
     text-color:       @fga;
     orientation:      horizontal;
     border-radius:    0px;
     padding:          8px;
-}
-
-element-icon {
-    size:             24px;
-    background-color: transparent;
-    border:           0px;
 }
 
 element-text {
