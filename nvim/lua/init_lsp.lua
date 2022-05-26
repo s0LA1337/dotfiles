@@ -8,4 +8,5 @@ lcfg.cmake.setup{}
 lcfg.dockerls.setup{}
 lcfg.html.setup{}
 lcfg.rnix.setup{}
-lcfg.lua.setup{}
+lcfg.vimls.setup{}
+lcfg.sumneko_lua.setup{}
