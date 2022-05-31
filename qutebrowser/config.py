@@ -36,7 +36,7 @@ c.url.start_pages = 'https://duckduckgo.com'
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = '~/Downloads/qutebrowser'
+c.downloads.location.directory = '~/Downloads'
 
 
 # When to show the tab bar.
