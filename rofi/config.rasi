@@ -1,3 +1,10 @@
+@import "colors.rasi"
+
+* {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
 configuration {
   font: "Ricty Diminished with Fira Code Regular 11";
   show-icons: false;
@@ -10,13 +17,6 @@ configuration {
     delay: 10;
     action: "kb-cancel";
   }
-}
-
-@import "colors.rasi"
-
-* {
-    background-color: @bg;
-    text-color:       @fg;
 }
 
 window {
