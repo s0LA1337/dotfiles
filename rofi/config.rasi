@@ -2,9 +2,9 @@ configuration {
   font: "Ricty Diminished with Fira Code Regular 11";
   show-icons: false;
 
-drun {
-    display-name: "";
-}
+  drun {
+      display-name: "";
+  }
 
   timeout {
     delay: 10;
@@ -20,7 +20,7 @@ window {
     border:           1px 3px 5px 1px;
     border-color:     @ac;
     border-radius:    2px;
-    width:            600px;
+    width:            450px;
     location:         center;
     x-offset:         0;
     y-offset:         0;
@@ -58,7 +58,7 @@ inputbar {
 }
 
 listview {
-    background-color: @al;
+    background-color: @bga;
     padding:          0px;
     columns:          1;
     lines:            4;
@@ -79,7 +79,6 @@ mainbox {
 }
 
 element {
-    background-color: @bg;
     text-color:       @fga;
     orientation:      horizontal;
     border-radius:    0px;
