@@ -7,7 +7,7 @@ disable_current_tag_swap = false
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show drun"
+value = "rofi -show run"
 modifier = ["modkey"]
 key = "p"
 

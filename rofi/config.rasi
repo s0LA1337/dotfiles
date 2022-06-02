@@ -1,109 +1,115 @@
 @import "colors.rasi"
 
-* {
-    background-color: @bg;
-    text-color:       @fg;
-}
-
 configuration {
-  font: "Ricty Diminished with Fira Code Regular 11";
-  show-icons: false;
+    font: "Ricty Diminished with Fira Code Regular 11";
+    show-icons: true;
 
-  drun {
-      display-name: "";
-  }
+    drun {
+        display-name: "";
+    }
 
-  timeout {
-    delay: 10;
-    action: "kb-cancel";
-  }
+    run {
+        display-name: "";
+    }
+
+    window {
+        display-name: "";
+    }
+
+    timeout {
+        delay: 10;
+        action: "kb-cancel";
+    }
+}
+#window {
+    background-color: @bg;
+    border:           1;
+    padding:          5;
 }
 
-window {
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border:       1px dash 0px 0px ;
+    border-color: @ac;
+    padding:      1px ;
+}
+
+#textbox {
+    text-color: @fg;
+}
+
+#listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: @ac;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+
+#element {
     background-color: @bg;
     text-color:       @fg;
-    border:           1px 3px 5px 1px;
-    border-color:     @ac;
-    border-radius:    2px;
-    width:            450px;
-    location:         center;
-    x-offset:         0;
-    y-offset:         0;
+    border:           0;
+    padding:          4px 4px;
 }
 
-prompt {
-    enabled:          true;
-    padding:          2px 0px 0px 4px;
-    background-color: @al;
-    text-color:       @fg;
-}
-
-entry {
-    background-color:  @al;
-    text-color:        @fg;
-    placeholder-color: @fg;
-    expand:            true;
-    horizontal-align:  0;
-    display-name:      "";
-    placeholder:       "Search...";
-    padding:           2px 0px 0px 6px;
-    blink:             true;
-}
-
-inputbar {
-    children:         [ prompt, entry ];
+#element.selected {
     background-color: @bga;
     text-color:       @fg;
-    expand:           false;
-    border:           0px;
-    border-radius:    0px;
-    border-color:     @ac;
-    margin:           0px;
-    padding:          8px;
 }
 
-listview {
-    background-color: @bga;
-    padding:          0px;
-    columns:          1;
-    lines:            6;
-    spacing:          4px;
-    cycle:            true;
-    dynamic:          true;
-    layout:           vertical;
+#scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
 }
 
-mainbox {
+#mode-switcher {
+    border:       2px dash 0px 0px ;
+    border-color: @ac;
+}
+
+#button.selected {
     background-color: @bg;
-    border:           0px;
-    border-radius:    0px;
-    border-color:     @ac;
-    children:         [ inputbar, listview ];
-    spacing:          6px;
-    padding:          6px;
-}
-
-element {
-    text-color:       @fga;
-    background-color: @bga;
-    orientation:      horizontal;
-    border-radius:    0px;
-    padding:          8px;
-}
-
-element-text {
-    expand:           true;
-    background-color: transparent;
     text-color:       @fg;
-    horizontal-align: 0;
-    vertical-align:   0.5;
-    margin:           0px 2.5px 0px 2.5px;
 }
 
-element selected {
-    background-color: @bga;
+#inputbar {
+    background-color: @bg;
+    spacing:          0;
     text-color:       @fg;
-    border:           0px 0px 0px 0px;
-    border-radius:    0px;
-    border-color:     @ac;
+    padding:          1px ;
+}
+
+#case-indicator {
+    spacing:    0;
+    text-color: @fg;
+}
+
+#entry {
+    background-color: @bg;
+    spacing:          0;
+    text-color:       @fg;
+}
+
+#prompt {
+    spacing:    0;
+    text-color: @fg;
+}
+
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @fg;
 }
