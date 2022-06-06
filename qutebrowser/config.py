@@ -90,22 +90,22 @@ def read_xresources(prefix):
 
 xresources = read_xresources('*')
 
-base00 = xresources['*color0']
-base01 = xresources['*color1']
-base02 = xresources['*color2']
-base03 = xresources['*color3']
-base04 = xresources['*color4']
-base05 = xresources['*color5']
-base06 = xresources['*color6']
-base07 = xresources['*color7']
-base08 = xresources['*color8']
-base09 = xresources['*color9']
-base0A = xresources['*color10']
-base0B = xresources['*color11']
-base0C = xresources['*color12']
-base0D = xresources['*color13']
-base0E = xresources['*color14']
-base0F = xresources['*color15']
+base00 = xresources['color0']
+base01 = xresources['color1']
+base02 = xresources['color2']
+base03 = xresources['color3']
+base04 = xresources['color4']
+base05 = xresources['color5']
+base06 = xresources['color6']
+base07 = xresources['color7']
+base08 = xresources['color8']
+base09 = xresources['color9']
+base0A = xresources['color10']
+base0B = xresources['color11']
+base0C = xresources['color12']
+base0D = xresources['color13']
+base0E = xresources['color14']
+base0F = xresources['color15']
 
 # set qutebrowser colors
 
