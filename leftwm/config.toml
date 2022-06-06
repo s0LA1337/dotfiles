@@ -25,7 +25,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "flameshot"
+value = "flameshot gui"
 modifier = ["modkey", "Shift"]
 key = "s"
 
