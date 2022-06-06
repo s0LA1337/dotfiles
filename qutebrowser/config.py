@@ -30,8 +30,8 @@ config.set("colors.webpage.darkmode.enabled", True)
 
 # Setting default page for when opening new tabs or new windows with
 # commands like :open -t and :open -w .
-c.url.default_page = 'https://duckduckgo.com'
-c.url.start_pages = 'https://duckduckgo.com'
+c.url.default_page = 'https://nixos.org'
+c.url.start_pages = 'https://nixos.org'
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
