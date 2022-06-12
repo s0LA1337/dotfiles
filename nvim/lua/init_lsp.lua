@@ -28,5 +28,7 @@ lcfg.html.setup{}
 lcfg.rnix.setup{}
 lcfg.vimls.setup{}
 lcfg.sumneko_lua.setup{}
-
+lcfg.ghcide.setup{}
+lcfg.idris2_lsp.setup{}
+lcfg.omnisharp.setup{}
 
